@@ -163,9 +163,9 @@ sudo systemctl enable tlp
 
 1.从源里安装
 
-`yay -S `mojave-gtk-theme-git papirus-icon-theme``
+`yay -S mojave-gtk-theme-git papirus-icon-theme`
 
-2.从以下网站下载，放到具体的位置
+2.从以下网站下载
 
 ```bash
 https://www.gnome-look.org/browse/
