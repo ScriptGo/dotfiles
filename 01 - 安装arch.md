@@ -279,7 +279,7 @@ passwd 用户名
 
 1.开启 multilib 仓
 
-找到 `[multilib]` 去掉其中两行前秒的注释符
+找到 `[multilib]` 去掉所有的注释符
 
 2.添加 archlinuxcn 源
 
@@ -353,9 +353,9 @@ pacman -S archlinuxcn-keyring
 
 6.为了避免更新 NVIDIA 驱动之后忘了更新 initramfs，你可以使用 Pacman Hooks：
 
-6.1 先在 `/etc/pacman.d/` 创建目录 `hooks`
+- 先在 `/etc/pacman.d/` 创建目录 `hooks`
 
-6.2 然后在 `hooks` 中创建 `nvidia.hook` 文件，并加入下面内容:
+- 然后在 `hooks` 中创建 `nvidia.hook` 文件，并加入下面内容:
 
 ```bash
 [Trigger]
