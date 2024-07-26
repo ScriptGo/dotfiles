@@ -331,11 +331,7 @@ pacman -S archlinuxcn-keyring
 
 `grub-mkconfig -o /boot/grub/grub.cfg`
 
-4.编辑 `/etc/modprobe.d/nvidia.conf`，添加以下内容:
-
-`options nvidia-drm moeset=1`
-
-5.编辑 `/etc/mkinitcpio.conf` 文件
+4.编辑 `/etc/mkinitcpio.conf` 文件
 
 修改 `MODULES=()` 为:
 
@@ -347,9 +343,18 @@ pacman -S archlinuxcn-keyring
 
 `mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img`
 
+5.编辑 `/etc/modprobe.d/nvidia.conf`，添加以下内容:
+
+`options nvidia-drm moeset=1`
+
+**再次确认 `/etc/modprobe.d/nvidia.conf` 内容无误!**
+
+`options nvidia-drm moeset=1`
+
 6.为了避免更新 NVIDIA 驱动之后忘了更新 initramfs，你可以使用 Pacman Hooks：
 
-编辑 `/etc/pacman.d/hooks/nvidia.hook` 加入下面内容:
+6.1 先在 `/etc/pacman.d/` 创建目录 `hooks`
+6.2 然后在 `hooks` 中创建 `nvidia.hook` 文件，并加入下面内容:
 
 ```bash
 [Trigger]
@@ -373,7 +378,7 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 | 软件包 | 安装                                                | 备注 |
 | ------ | --------------------------------------------------- | ---- |
 |        | pacman -S pipewire wireplumber                      |      |
-|        | pacman S pipewire-alsa pipewire-jack pipewire-pulse |      |
+|        | pacman -S pipewire-alsa pipewire-jack pipewire-pulse |      |
 
 ### 蓝牙
 
