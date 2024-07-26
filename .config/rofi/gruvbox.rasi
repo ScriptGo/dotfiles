@@ -1,0 +1,25 @@
+* {
+    bg:                   #282828;
+    fg:                   #ebdbb2;
+
+    active-bg:            #458588;
+    active-fg:            #ebdbb2;
+    normal-bg:            #282828;
+    normal-fg:            #ebdbb2;
+    urgent-bg:            #fe8019;
+    urgent-fg:            #ebdbb2;
+
+    alternate-active-bg:  #282828;
+    alternate-active-fg:  #ebdbb2;
+    alternate-normal-bg:  #282828;
+    alternate-normal-fg:  #ebdbb2;
+    alternate-urgent-bg:  #282828;
+    alternate-urgent-fg:  #ebdbb2;
+
+    selected-active-bg:   #f9f5d7;
+    selected-active-fg:   #ebdbb2;
+    selected-normal-bg:   #d79921;
+    selected-normal-fg:   #ebdbb2;
+    selected-urgent-bg:   #b16286;
+    selected-urgent-fg:   #ebdbb2;
+}

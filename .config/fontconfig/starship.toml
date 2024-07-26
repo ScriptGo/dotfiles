@@ -1,0 +1,118 @@
+## ░█▀▀░▀█▀░█▀█░█▀▄░█▀▀░█░█░▀█▀░█▀█
+## ░▀▀█░░█░░█▀█░█▀▄░▀▀█░█▀█░░█░░█▀▀
+## ░▀▀▀░░▀░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░▀░░
+
+format = """[](#d65d0e)$os[](bg:#d79921 fg:#d65d0e)$directory[ ](#d79921)"""
+right_format = """$git_branch$git_status$python$cmd_duration"""
+
+# 在提示符之间插入空行
+add_newline = true
+
+[character]
+disabled = false
+# success_symbol = "[ ➜ ](bold #98971a)"
+error_symbol = "[  ](bold #cc241d)"
+vicmd_symbol = "[  ](bold #98971a)"
+vimcmd_replace_one_symbol = "[](bold #b16286')"
+vimcmd_replace_symbol = "[](bold #b16286')"
+vimcmd_visual_symbol = "[](bold #d79921)"
+
+[os]
+disabled = false
+style = "bg:#d65d0e fg:#fbf1c7"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇 "
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[username]
+disabled = false
+show_always = true
+style_user = "bg:#d65d0e fg:#fbf1c7"
+style_root = "bg:#d65d0e fg:#fbf1c7"
+format = "[ $user ]($style)"
+
+[hostname]
+disabled = false
+ssh_only = true
+format = "[$hostname](bold blue) "
+
+[directory]
+disabled = false
+style = "fg:#fbf1c7 bg:#d79921"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+truncate_to_repo=false
+home_symbol = "~"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+disabled = false
+format = "[](fg:#78b892 bg:#232526)[](fg:#282c34 bg:#78b892)[](fg:#78b892 bg:none)[](fg:#232526 bg:none)[$branch](fg:#edeff0 bg:#232526)[](fg:#232526 bg:#232526)"
+symbol = "[ ](bold blue)"
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = "🔖 "
+
+format = "[\\($hash\\)]($style) [\\($tag\\)]($style)"
+style = "green"
+
+[git_state]
+format = "[\\($state( $progress_current / $progress_total)\\)](yellow) "
+cherry_pick = "CHERRY-PICKING(bold red)"
+rebase = "REBASING"
+merge = "MERGING"
+revert = "REVERTING"
+
+bisect = "BISECTING"
+am = "AM"
+am_or_rebase = "AM/REBASE"
+
+[git_status]
+format="[](fg:#67afc1 bg:#232526)[](fg:#232526 bg:#67afc1)[](fg:#67afc1 bg:none)[](fg:#232526 bg:none)[$all_status$ahead_behind](fg:#edeff0 bg:#232526)[](fg:#232526 bg:#232526)"
+conflicted = "= "
+ahead = "⇡ ${count} "
+behind = "⇣ ${count} "
+diverged = "⇕⇡${ahead_count} ⇣${behind_count} "
+up_to_date = ""
+untracked = "?${count} "
+stashed = "$ "
+modified = "!${count} "
+staged = '[++\($count\)](green) '
+renamed = "»${count} "
+deleted = "${count} "
+
+[python]
+disabled = false
+detect_extensions = ['py']
+detect_folders = ['python', '.venvs']
+
+[cmd_duration]
+disabled = false
+min_time = 1
+format = "[](fg:#bc83e3 bg:#232526)[](fg:#232526 bg:#bc83e3)[](fg:#bc83e3 bg:none)[](fg:#232526 bg:none)[$duration](fg:#edeff0 bg:#232526)[](fg:#232526 bg:#232526)"
