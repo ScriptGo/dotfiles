@@ -55,7 +55,7 @@ sudo pacman -S xdg-user-dirs-gtk
 | 笔记      | sudo pacman -S joplin-desktop              |                         |
 | 防火墙    | sudo pacman -S ufw                         | sudo ufw enable         |
 | 科学上网  | sudo pacman -S v2raya                      |                         |
-| 科学上网  | yay -S v2raya                              |                         |
+| 科学上网  | yay -S clash-verge-rev-bin                 |                         |
 | 浏览器    | yay -S google-chrome                       |                         |
 | 编辑器    | yay -S visual-studio-code-bin              |                         |
 
