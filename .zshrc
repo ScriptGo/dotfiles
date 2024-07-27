@@ -28,10 +28,10 @@ setopt SHARE_HISTORY
 # 为历史记录中的命令添加时间戳
 setopt EXTENDED_HISTORY
 
-HISTFILE=$HOME/.zhistory        # 记录文件存放位置
-HISTSIZE=10000              # 历史文件记录的最大行数
-SAVEHIST=10000              # 保留历史记录的最大行数
-HIST_STAMPS="yyyy-mm-dd"    # 历史命令的命时间格式
+HISTFILE=$HOME/.zhistory    # 记录文件的位置
+HISTSIZE=10000              # 历史文件的最大行数
+SAVEHIST=10000              # 历史记录的最大行数
+HIST_STAMPS="yyyy-mm-dd"    # 历史命令的时间格式
 
 # ##############################################################################
 # 自动补全
