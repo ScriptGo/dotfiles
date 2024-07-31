@@ -57,7 +57,6 @@ sudo pacman -S xdg-user-dirs-gtk
 | 防火墙    | sudo pacman -S ufw                         | sudo ufw enable         |
 | java | sudo pacman -S jre17-openjdk |  |
 | npm | sudo pacman -S npm | npm config set registry https://registry.npmmirror.com |
-
 | 科学上网  | sudo pacman -S v2raya                      |                         |
 | 科学上网  | yay -S clash-verge-rev-bin                 |                         |
 | 浏览器    | yay -S google-chrome                       |                         |
