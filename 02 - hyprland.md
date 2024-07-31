@@ -55,6 +55,9 @@ sudo pacman -S xdg-user-dirs-gtk
 | 笔记      | sudo pacman -S joplin-desktop              |                         |
 | Pi-imager | sudo pacman -S rpi-imager                  |                        |
 | 防火墙    | sudo pacman -S ufw                         | sudo ufw enable         |
+| java | sudo pacman -S jre17-openjdk |  |
+| npm | sudo pacman -S npm | npm config set registry https://registry.npmmirror.com |
+
 | 科学上网  | sudo pacman -S v2raya                      |                         |
 | 科学上网  | yay -S clash-verge-rev-bin                 |                         |
 | 浏览器    | yay -S google-chrome                       |                         |
@@ -70,7 +73,7 @@ sudo pacman -S xdg-user-dirs-gtk
 | 简化版man | yay -S tldr                                         | tldr --update          |
 | 系统信息  | sudo pacman -S btop fastfetch                       | fastfetch --gen-config |
 | 个性化    | sudo pacman -S fortune-mod sl cowsay cmatrix lolcat |                        |
-| 其他      | sudo pacman -S bat fd fzf jq tree ripgrep zenity    |                        |
+| 其他      | sudo pacman -S bat fd fzf tree ripgrep zenity    |                        |
 
 ### 多媒体
 
