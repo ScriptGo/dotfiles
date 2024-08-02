@@ -345,11 +345,11 @@ pacman -S archlinuxcn-keyring
 
 5.编辑 `/etc/modprobe.d/nvidia.conf`，添加以下内容:
 
-`options nvidia-drm moeset=1`
+`options nvidia-drm modeset=1`
 
 **再次确认 `/etc/modprobe.d/nvidia.conf` 内容无误!**
 
-`options nvidia-drm moeset=1`
+`options nvidia-drm modeset=1`
 
 6.为了避免更新 NVIDIA 驱动之后忘了更新 initramfs，你可以使用 Pacman Hooks：
 
