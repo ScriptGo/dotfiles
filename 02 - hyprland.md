@@ -35,32 +35,25 @@ sudo pacman -S xdg-user-dirs-gtk
 
 ## 软件
 
-### 字体
-
-| 软件包 | 安装                                                                                             | 备注 |
-| ------ | ------------------------------------------------------------------------------------------------ | ---- |
-| 基本   | sudo pacman -S terminus-font noto-fonts noto-fonts-cjk noto-fonts-emoji                          |      |
-| 常用   | sudo pacman -S ttf-sarasa-gothic ttf-fira-code ttf-jetbrains-mono                                |      |
-| Nerd   | sudo pacman -S ttf-firacode-nerd ttf-jetbrains-mono-nerd awesome-terminal-fonts otf-font-awesome |      |
-
 ### GUI
 
-| 软件包    | 安装                                       | 备注                    |
-| --------- | ------------------------------------------ | ----------------------- |
-| 文件压缩  | sudo pacman -S file-roller p7zip unrar     |                         |
-| pdf阅读器 | sudo pacman -S zathura zathura-pdf-poppler |                         |
-| nvim依赖  | sudo pacman -S python-pynvim               |                         |
-| 办公软件  | sudo pacman - S libreoffice-fresh          | libreoffice-fresh-zh-cn |
-| 字体管理  | sudo pacman -S font-manager                |                         |
-| 笔记      | sudo pacman -S joplin-desktop              |                         |
-| Pi-imager | sudo pacman -S rpi-imager                  |                        |
-| 防火墙    | sudo pacman -S ufw                         | sudo ufw enable         |
-| java | sudo pacman -S jre17-openjdk |  |
-| npm | sudo pacman -S npm | npm config set registry https://registry.npmmirror.com |
-| 科学上网  | sudo pacman -S v2raya                      |                         |
-| 科学上网  | yay -S clash-verge-rev-bin                 |                         |
-| 浏览器    | yay -S google-chrome                       |                         |
-| 编辑器    | yay -S visual-studio-code-bin              |                         |
+| 软件包    | 安装                                       | 备注                                                   |
+| --------- | ------------------------------------------ | ------------------------------------------------------ |
+| 文件压缩  | sudo pacman -S file-roller p7zip unrar     |                                                        |
+| pdf阅读器 | sudo pacman -S zathura zathura-pdf-poppler |                                                        |
+| nvim依赖  | sudo pacman -S python-pynvim               |                                                        |
+| 办公软件  | sudo pacman - S libreoffice-fresh          | libreoffice-fresh-zh-cn                                |
+| 字体管理  | sudo pacman -S font-manager                |                                                        |
+| 笔记      | sudo pacman -S joplin-desktop              |                                                        |
+| Pi-imager | sudo pacman -S rpi-imager                  |                                                        |
+| ventoy    | sudo pacman -S ventoy                      |                                                        |
+| 防火墙    | sudo pacman -S ufw                         | sudo ufw enable                                        |
+| java      | sudo pacman -S jre17-openjdk               |                                                        |
+| npm       | sudo pacman -S npm                         | npm config set registry https://registry.npmmirror.com |
+| 科学上网  | sudo pacman -S v2raya                      |                                                        |
+| 科学上网  | yay -S clash-verge-rev-bin                 |                                                        |
+| 浏览器    | yay -S google-chrome                       |                                                        |
+| 编辑器    | yay -S visual-studio-code-bin              |                                                        |
 
 ### CLI
 
@@ -72,7 +65,7 @@ sudo pacman -S xdg-user-dirs-gtk
 | 简化版man | yay -S tldr                                         | tldr --update          |
 | 系统信息  | sudo pacman -S btop fastfetch                       | fastfetch --gen-config |
 | 个性化    | sudo pacman -S fortune-mod sl cowsay cmatrix lolcat |                        |
-| 其他      | sudo pacman -S bat fd fzf tree ripgrep zenity    |                        |
+| 其他      | sudo pacman -S bat fd fzf tree ripgrep zenity       |                        |
 
 ### 多媒体
 
@@ -185,7 +178,7 @@ https://store.kde.org/browse/
 `git clone https://github.com/vinceliuice/grub2-themes.git && cd grub2-themes`
 
 然后使用自带的脚本安装即可
-` sudo ./install -t`
+`sudo ./install -t`
 
 ### sddm
 

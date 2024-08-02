@@ -195,7 +195,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"
 - 将 loglevel 的值改为 5
 - 将 quiet 替换为 nowatchdog
 
-3.生成 `GRUB`所需的配置文件
+  3.生成 `GRUB`所需的配置文件
 
 `grub-mkconfig -o /boot/grub/grub.cfg`
 
@@ -376,9 +376,9 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 
 ### 音频
 
-| 软件包 | 安装                                                | 备注 |
-| ------ | --------------------------------------------------- | ---- |
-|        | pacman -S pipewire wireplumber                      |      |
+| 软件包 | 安装                                                 | 备注 |
+| ------ | ---------------------------------------------------- | ---- |
+|        | pacman -S pipewire wireplumber                       |      |
 |        | pacman -S pipewire-alsa pipewire-jack pipewire-pulse |      |
 
 ### 蓝牙
@@ -386,3 +386,11 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 | 软件包 | 安装                                | 备注                       |
 | ------ | ----------------------------------- | -------------------------- |
 |        | pacman -S bluez bluez-utils blueman | systemctl enable bluetooth |
+
+### 字体
+
+| 软件包 | 安装                                                                                             | 备注 |
+| ------ | ------------------------------------------------------------------------------------------------ | ---- |
+| 基本   | sudo pacman -S terminus-font noto-fonts noto-fonts-cjk noto-fonts-emoji                          |      |
+| 常用   | sudo pacman -S ttf-sarasa-gothic ttf-fira-code ttf-jetbrains-mono                                |      |
+| Nerd   | sudo pacman -S ttf-firacode-nerd ttf-jetbrains-mono-nerd awesome-terminal-fonts otf-font-awesome |      |
