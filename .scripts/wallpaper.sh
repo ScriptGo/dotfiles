@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+DIR="$HOME/Pictures/wallpaper"
+swww-daemon
+
+while true; do
+    PICS=("$DIR"/*)
+    RANDOMPIC="${PICS[RANDOM % ${#PICS[@]}]}"
+    swww img "$RANDOMPIC" --transition-fps 30 --transition-type random --transition-duration 3
+    sleep 60
+done
