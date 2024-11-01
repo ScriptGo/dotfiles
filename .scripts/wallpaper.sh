@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 DIR="$HOME/Pictures/wallpaper"
-swww-daemon
 
 while true; do
     PICS=("$DIR"/*)
