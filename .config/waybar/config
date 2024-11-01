@@ -2,6 +2,8 @@
     "id": "bar-0",
     "layer": "top",
     "position": "top",
+    "reload_style_on_change": true,
+
     "modules-left": [
         "clock",
         "clock#date",
