@@ -1,0 +1,101 @@
+conky.config = {
+
+out_to_x = true,
+out_to_wayland = false,
+
+---window---
+
+own_window = true,                     --创建窗口
+own_window_type = 'normal',          --窗口类型
+own_window_transparent = true,         --透明
+
+alignment = 'top_left',                --窗口所在屏幕位置
+gap_x = 25,                            --窗口离屏幕左边或右边的距离
+gap_y = 45,                            --窗口离屏幕顶部或底部的距离
+minimum_width = 280,                   --窗口最小宽度
+
+background = true,                     --后台运行
+double_buffer = true,                  --启用双重缓冲，消除闪烁
+no_buffers = true,
+
+---Borders---
+
+draw_borders = false,                  --是否绘制窗口边框
+draw_graph_borders = false,            --是否绘制网速cpu等外框
+-- show_graph_scale = false,
+-- show_graph_range = false,
+-- default_bar_size 60 8                 进度条尺寸
+
+---Font---
+
+font = 'Sarasa Term SC:size=16',
+use_xft = true,
+
+---Color---
+
+color0 = 'cc241d', --红
+color1 = '98971a', --绿
+color2 = 'd79921', --黄
+color3 = '458588', --蓝
+color4 = 'b16286', --橙
+color5 = '689d6a',
+color6 = 'a89984',
+color7 = 'd65d0e',
+color8 = 'ebdbb2', --白
+color9 = '282828', --黑
+
+---Other---
+
+cpu_avg_samples = 2,
+net_avg_samples = 2,
+format_human_readable = true,
+update_interval = 1.0,
+
+}
+
+conky.text = [[
+
+${color2}App
+${color5}${stippled_hr}
+${color8}Super + a   ${color1}${alignr}alacritty
+${color8}Super + r   ${color1}${alignr}ranger
+${color8}Super + e   ${color1}${alignr}pcmanfm
+${color8}Super + m   ${color1}${alignr}ncmpcpp
+${color8}Super + l   ${color1}${alignr}rofi
+${color5}${stippled_hr}
+${color2}Layout
+${color5}${stippled_hr}
+${color8}Super + w    ${color1}${alignr}切换布局
+${color8}Super + v    ${color1}${alignr}垂直分割
+${color8}Super + h    ${color1}${alignr}水平分割
+${color5}${stippled_hr}
+${color2}Windows
+${color5}${stippled_hr}
+${color8}Super + f            ${color1}${alignr}全屏切换
+${color8}Super + q            ${color1}${alignr}关闭窗口
+${color8}Super + 方向键        ${color1}${alignr}交换窗口
+${color8}Ctrl + 方向键         ${color1}${alignr}移动窗口
+${color8}Super + Alt + 方向键  ${color1}${alignr}调整窗口
+
+${color8}Super + space      ${color1}${alignr}浮动/平铺
+${color8}Super + s          ${color1}${alignr}浮动/粘滞
+${color8}Super + t          ${color1}${alignr}将窗口转换为 scratchpad
+${color8}Super + shift + t  ${color1}${alignr}显示/隐藏 scratchpad
+${color5}${stippled_hr}
+${color2}WorkSpace
+${color5}${stippled_hr}
+${color8}Super + 数字           ${color1}${alignr}切换到指定工作区
+${color8}Super + n             ${color1}${alignr}下一个工作区
+${color8}Super + p             ${color1}${alignr}上一个工作区
+${color8}Super + Shift + 数字   ${color1}${alignr}将窗口移动到指定工作区
+${color5}${stippled_hr}
+${color2}Misc
+${color5}${stippled_hr}
+${color8}Super + Esc         ${color1}${alignr}Reload sxhkd
+${color8}Super + p           ${color1}${alignr}隐藏/显示 bar
+
+${color8}Super + 9           ${color1}${alignr}锁屏
+${color8}Super + 0           ${color1}${alignr}PowerMenu
+${color5}${stippled_hr}
+
+]]
