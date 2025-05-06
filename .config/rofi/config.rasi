@@ -1,0 +1,422 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Configuration For Rofi Version: 1.7.3
+ **/
+
+configuration {
+    /*---------- General setting ----------*/
+    modi:                 "drun,run,filebrowser,keys";
+    show-icons:           true;
+    icon-theme:           "MacBuntu-Mine-Y";
+    fixed-num-lines:      true;
+    sidebar-mode:         true;
+    hide-scrollbar:       true;
+    case-sensitive:       false;
+    cycle:                true;
+    filter:               "";
+    scroll-method:        1;
+    normalize-match:      true;
+    steal-focus:          false;
+/*    location: 0;*/
+/*    yoffset: 0;*/
+/*    xoffset: 0;*/
+/*    hover-select: false;*/
+/*    eh: 1;*/
+/*    auto-select: false;*/
+/*    m: "-5";*/
+/*    matching-negate-char: '-' /* unsupported */;*/
+/*    application-fallback-icon: ;*/
+/*    ignored-prefixes: "";*/
+/*    pid: "/run/user/1000/rofi.pid";*/
+/*    cache-dir: ;*/
+/*    dpi: -1;*/
+
+    /*---------- Misc setting ----------*/
+    terminal:             "kitty";
+    sort:                 false;
+    threads:              0;
+    click-to-exit:        true;
+
+    /*---------- Matching setting ----------*/
+    show-match:           false;
+    matching:             "normal";
+    tokenize:             true;
+
+    /*---------- Fallback Icon ----------*/
+    run,drun {
+        fallback-icon:    "application-x-addon";
+    }
+
+    /*---------- History and Sorting ----------*/
+    disable-history:      false;
+    sorting-method:       "normal";
+    max-history-size:     25;
+
+    /*---------- Other settings ----------*/
+    timeout {
+      action:             "kb-cancel";
+      delay:              0;
+    }
+
+    /*---------- Combi settings ----------*/
+    combi-modi:                "window,drun,run,ssh,filebrowser,keys";
+    combi-hide-mode-prefix:    false;
+    combi-display-format:      "{mode} {text}";
+
+    /*---------- Display setting ----------*/
+    display-window:       "";
+    display-windowcd:     "";
+    display-run:          "";
+    display-ssh:          "";
+    display-drun:         "";
+    display-combi:        "";
+    display-keys:         "";
+    display-filebrowser:  "";
+
+    /*---------- Drun settings ----------*/
+    drun-categories:              "";
+    drun-match-fields:            "name,generic,exec,categories,keywords";
+    drun-display-format:          "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+    drun-show-actions:            false;
+    drun-url-launcher:            "xdg-open";
+    drun-use-desktop-cache:       false;
+    drun-reload-desktop-cache:    false;
+    drun {
+        /** Parse user desktop files. */
+        parse-user:               true;
+        /** Parse system desktop files. */
+        parse-system:             true;
+    }
+
+    /*---------- Run settings ----------*/
+    run-command:          "{cmd}";
+    run-list-command:     "";
+    run-shell-command:    "{terminal} -e {cmd}";
+
+    /*---------- SSH settings ----------*/
+    ssh-client:           "ssh";
+    ssh-command:          "{terminal} -e {ssh-client} {host} [-p {port}]";
+    parse-hosts:          true;
+    parse-known-hosts:    true;
+
+    /*---------- Window switcher settings ----------*/
+    window-match-fields:  "title,class,role,name,desktop";
+    window-command:       "wmctrl -i -R {window}";
+    window-format:        "{w} ··· {c} ··· {t:0}";
+    window-thumbnail:      false;
+
+    /*---------- File browser settings ----------*/
+    filebrowser {
+/*      directory: "/home";*/
+      directories-first:  true;
+      sorting-method:     "name";
+    }
+
+    /*---------- Keybindings ----------*/
+/*
+    kb-primary-paste: "Control+V,Shift+Insert";
+    kb-secondary-paste: "Control+v,Insert";
+    kb-clear-line: "Control+w";
+    kb-move-front: "Control+a";
+    kb-move-end: "Control+e";
+    kb-move-word-back: "Alt+b,Control+Left";
+    kb-move-word-forward: "Alt+f,Control+Right";
+    kb-move-char-back: "Left,Control+b";
+    kb-move-char-forward: "Right,Control+f";
+    kb-remove-word-back: "Control+Alt+h,Control+BackSpace";
+    kb-remove-word-forward: "Control+Alt+d";
+    kb-remove-char-forward: "Delete,Control+d";
+    kb-remove-char-back: "BackSpace,Shift+BackSpace,Control+h";
+    kb-remove-to-eol: "Control+k";
+    kb-remove-to-sol: "Control+u";
+    kb-accept-entry: "Control+j,Control+m,Return,KP_Enter";
+    kb-accept-custom: "Control+Return";
+    kb-accept-custom-alt: "Control+Shift+Return";
+    kb-accept-alt: "Shift+Return";
+    kb-delete-entry: "Shift+Delete";
+    kb-mode-next: "Shift+Right,Control+Tab";
+    kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";
+    kb-mode-complete: "Control+l";
+    kb-row-left: "Control+Page_Up";
+    kb-row-right: "Control+Page_Down";
+    kb-row-down: "Down,Control+n";
+    kb-page-prev: "Page_Up";
+    kb-page-next: "Page_Down";
+    kb-row-first: "Home,KP_Home";
+    kb-row-last: "End,KP_End";
+    kb-row-select: "Control+space";
+    kb-screenshot: "Alt+S";
+    kb-ellipsize: "Alt+period";
+    kb-toggle-case-sensitivity: "grave,dead_grave";
+    kb-toggle-sort: "Alt+grave";
+    kb-cancel: "Escape,Control+g,Control+bracketleft";
+    kb-custom-1: "Alt+1";
+    kb-custom-2: "Alt+2";
+    kb-custom-3: "Alt+3";
+    kb-custom-4: "Alt+4";
+    kb-custom-5: "Alt+5";
+    kb-custom-6: "Alt+6";
+    kb-custom-7: "Alt+7";
+    kb-custom-8: "Alt+8";
+    kb-custom-9: "Alt+9";
+    kb-custom-10: "Alt+0";
+    kb-custom-11: "Alt+exclam";
+    kb-custom-12: "Alt+at";
+    kb-custom-13: "Alt+numbersign";
+    kb-custom-14: "Alt+dollar";
+    kb-custom-15: "Alt+percent";
+    kb-custom-16: "Alt+dead_circumflex";
+    kb-custom-17: "Alt+ampersand";
+    kb-custom-18: "Alt+asterisk";
+    kb-custom-19: "Alt+parenleft";
+    kb-select-1: "Super+1";
+    kb-select-2: "Super+2";
+    kb-select-3: "Super+3";
+    kb-select-4: "Super+4";
+    kb-select-5: "Super+5";
+    kb-select-6: "Super+6";
+    kb-select-7: "Super+7";
+    kb-select-8: "Super+8";
+    kb-select-9: "Super+9";
+    kb-select-10: "Super+0";
+    ml-row-left: "ScrollLeft";
+    ml-row-right: "ScrollRight";
+    ml-row-up: "ScrollUp";
+    ml-row-down: "ScrollDown";
+    me-select-entry: "MousePrimary";
+    me-accept-entry: "MouseDPrimary";
+    me-accept-custom: "Control+MouseDPrimary";
+*/
+}
+
+/*****----- Global Properties -----*****/
+@import    "~/.config/rofi/gruvbox.rasi"
+
+/*****----- Main Window -----*****/
+window {
+    /* properties for window widget */
+    font:                 "FiraCode Nerd Font 18";
+    transparency:         "real";
+    location:             center;
+    anchor:               center;
+    fullscreen:           false;
+    width:                640px;
+    x-offset:             0;
+    y-offset:             0;
+
+    /* properties for all widgets */
+    enabled:              true;
+    margin:               0px;
+    padding:              0px;
+    border:               2px solid;
+    border-radius:        15px;
+    border-color:         @fg;
+    background-color:     @bg;
+    cursor:               "default";
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:              true;
+    spacing:              10px;
+    margin:               0px;
+    padding:              25px;
+    border:               0px;
+    border-radius:        15px;
+    background-color:     @bg;
+    children:             [ "inputbar", "message", "listview", "mode-switcher" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:              true;
+    spacing:              10px;
+    margin:               0px;
+    padding:              10px;
+    border:               1px;
+    border-radius:        100%;
+    border-color:         gray/25%;
+    background-color:     @bg;
+    text-color:           @normal-fg;
+    children:             [ "textbox-prompt-colon", "entry" ];
+}
+
+prompt {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+
+textbox-prompt-colon {
+    enabled:              true;
+    expand:               false;
+    margin:               0px;
+    padding:              8px 11px;
+    border-radius:        100%;
+    background-color:     @bg;
+    text-color:           @normal-fg;
+    str:                  "";
+}
+
+entry {
+    enabled:              true;
+    padding:              8px 12px;
+    border:               0px;
+    background-color:     @bg;
+    text-color:           @normal-fg;
+    cursor:               text;
+    placeholder:          "Search";
+    placeholder-color:    inherit;
+    vertical-align:       0.5;
+    horizontal-align:     0.0;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:              true;
+    lines:                10;
+    columns:              1;
+    cycle:                true;
+    dynamic:              true;
+    scrollbar:            false;
+    layout:               vertical;
+    reverse:              false;
+    fixed-height:         true;
+    fixed-columns:        true;
+    padding:              10px 0px 0px;
+    border:               2px 0px 0px;
+    border-color:         @bg;
+    spacing:              5px;
+    background-color:     @bg;
+    cursor:               "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:              true;
+    spacing:              10px;
+    margin:               0px;
+    padding:              5px;
+    border:               0px;
+    border-radius:        15px;
+    border-color:         gray/15%;
+    cursor:               pointer;
+}
+
+element.normal.normal {
+    background-color:     @normal-bg;
+    text-color:           @normal-fg;
+}
+
+element.normal.active {
+    background-color:     @active-bg;
+    text-color:           @active-fg;
+}
+
+element.selected.normal {
+    background-color:     @selected-normal-bg;
+    text-color:           @selected-normal-fg;
+}
+
+element.selected.active {
+    background-color:     @selected-active-bg;
+    text-color:           @selected-active-fg;
+}
+
+element.normal.urgent {
+    background-color:     @urgent-bg;
+    text-color:           @urgent-fg;
+}
+
+element.selected.urgent {
+    background-color:     @selected-urgent-bg;
+    text-color:           @selected-urgent-fg;
+}
+
+element.alternate.normal {
+    background-color:     @alternate-normal-bg;
+    text-color:           @alternate-normal-fg;
+}
+
+element.alternate.urgent {
+    background-color:     @alternate-urgent-bg;
+    text-color:           @alternate-urgent-fg;
+}
+
+element.alternate.active {
+    background-color:     @alternate-active-bg;
+    text-color:           @alternate-active-fg;
+}
+
+element-icon {
+    background-color:     transparent;
+    size:                 24px;
+    cursor:               inherit;
+    border:               0px;
+}
+
+element-text {
+    background-color:     inherit;
+    text-color:           inherit;
+    cursor:               inherit;
+    vertical-align:       0.5;
+    horizontal-align:     0.0;
+}
+
+/*****----- Mode Switcher -----*****/
+mode-switcher{
+    enabled:              true;
+    expand:               false;
+    spacing:              0px;
+    margin:               20px;
+    padding:              12px;
+    border-radius:        100%;
+    background-color:     transparent;
+}
+
+button {
+    margin:               4px;
+    padding:              4px;
+    border:               0px;
+    border-radius:        100%;
+    text-color:           @normal-fg;
+    cursor:               pointer;
+}
+
+button.selected {
+    background-color:     @selected-normal-bg;
+    text-color:           @selected-normal-fg;
+}
+
+/*****----- Message -----*****/
+message {
+    enabled:              true;
+    margin:               0px;
+    padding:              1px;
+    border:               2px 0px 0px;
+    border-color:         @bg;
+    background-color:     @bg;
+    text-color:           @fg;
+}
+
+textbox {
+    padding:              0px;
+    border-radius:        0px;
+    background-color:     @bg;
+    text-color:           @fg;
+    placeholder-color:    @fg;
+    highlight:            none;
+    vertical-align:       0.5;
+    horizontal-align:     0.0;
+    blink:                true;
+    markup:               true;
+}
+
+error-message {
+    padding:              20px;
+    background-color:     @bg;
+    text-color:           @fg;
+}
