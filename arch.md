@@ -68,12 +68,12 @@ timedatectl status       # 检查服务状态
 
 使用 `cfdisk` 分区，为每个分区分配合适的大小。
 
-| 分区           | 分区类型 | 挂载点 | 空间分配     |
-| -------------- | -------- | ------ | ------------ |
-| /dev/nvme0n1p1 | EFI      | /boot  | 1G           |
-| /dev/nvme0n1p2 | root     | /      | 100G         |
-| /dev/nvme0n1p3 | home     | /home  | 余下全部空间 |
-| /dev/nvme0n1p4 | swap     | SWAP   | 内存的1.5倍  |
+| 分区           | 分区类型 | 挂载点 | 空间分配      |
+| -------------- | -------- | ------ | ------------- |
+| /dev/nvme0n1p1 | EFI      | /boot  | 1G            |
+| /dev/nvme0n1p2 | root     | /      | 100G          |
+| /dev/nvme0n1p3 | home     | /home  | 余下全部空间  |
+| /dev/nvme0n1p4 | swap     | SWAP   | 内存的 1.5 倍 |
 
 使用 `lsblk` 查看磁盘的分区情况
 
@@ -279,11 +279,7 @@ passwd 用户名
 
 编辑 `/etc/pacman.conf` 文件
 
-1.开启 multilib 仓
-
-找到 `[multilib]` 去掉所有的注释符
-
-2.添加 archlinuxcn 源
+1.添加 archlinuxcn 源
 
 在文件的最后加入以下内容:
 
@@ -293,7 +289,7 @@ Server = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
 Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 ```
 
-3.彩蛋
+2.彩蛋
 
 去掉以下内容前面的注释符:
 
@@ -305,11 +301,11 @@ Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 ILoveCandy # 加入这行
 ```
 
-4.更新源
+3.更新源
 
 `pacman -Syyu`
 
-5.添加archlinuxcn-keying
+4.添加 archlinuxcn-keying
 
 ```bash
 pacman -S archlinuxcn-keyring
@@ -321,7 +317,7 @@ pacman -S archlinuxcn-keyring
 
 1.安装
 
-`pacman -S nvidia-open nvidia-settings lib32-nvidia-utils`
+`pacman -S nvidia-open nvidia-settings`
 
 2.修改 grub
 
@@ -371,7 +367,7 @@ Target=nvidia
 Target=linux
 
 [Action]
-Description=Update Nvidia module in initcpio
+Description=Update nvidia module in initcpio
 Depends=mkinitcpio
 When=PostTransaction
 NeedsTargets
