@@ -44,8 +44,6 @@ sudo pacman -S xdg-user-dirs-gtk
 | 办公软件  | sudo pacman -S libreoffice-fresh            | libreoffice-fresh-zh-cn                                  |
 | 字体管理  | sudo pacman -S font-manager                 |                                                          |
 | 笔记      | sudo pacman -S joplin-desktop               |                                                          |
-| Pi-imager | sudo pacman -S rpi-imager                   |                                                          |
-| ventoy    | sudo pacman -S ventoy                       |                                                          |
 | 防火墙    | sudo pacman -S ufw                          | sudo ufw enable                                          |
 | java      | sudo pacman -S jre17-openjdk                |                                                          |
 | npm       | sudo pacman -S npm                          | npm config set registry <https://registry.npmmirror.com> |
