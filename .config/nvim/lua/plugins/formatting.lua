@@ -10,7 +10,6 @@ return {
                 json = { "prettier" },
                 lua = { "stylua" },
                 markdown = { "prettier" },
-                python = { "black", "isort" },
             },
             format_on_save = {
                 lsp_fallback = true,
