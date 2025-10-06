@@ -1,0 +1,293 @@
+* {
+    border: none;
+    font-family: "Iosevka Nerd Font","Sarasa Term SC";
+    font-size: 22px;
+    min-height: 0;
+    font-style: normal;
+    font-weight: normal;
+}
+
+window#waybar {
+    background: transparent;
+    color: #cdd6f4
+}
+
+button#label {
+    background: transparent;
+}
+
+tooltip {
+    background: #282828;
+    color: #ebdbb2;
+    border-radius: 10px;
+    border: solid 1px #FE8019;
+}
+
+tooltip#label {
+    background: #282828;
+    color: #ebdbb2;
+    text-shadow: none;
+    border: none;
+}
+
+#workspaces,
+#clock,
+
+#cpu,
+#memory,
+#temperature,
+#pulseaudio,
+#bluetooth,
+
+#network,
+#battery,
+#tray,
+
+#custom-cava,
+#custom-logo,
+#custom-launcher,
+#custom-pacman,
+#custom-powermenu,
+
+#workspaces {
+    background-color: transparent;
+}
+
+#workspaces button {
+    color: #928374;
+    border-radius: 10px;
+    padding: 0px 6px 0px 6px;
+}
+
+#workspaces button.active {
+    background-color: #427b58;
+    color: #282828;
+    border: solid 1px #FE8019;
+}
+
+#clock {
+    background-color: #2e3440;
+    color: #d8dee9;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#cpu {
+    background-color: #2e3440;
+    color: #bf616a;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#memory {
+    background-color: #2e3440;
+    color: #88c0d0;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#temperature {
+    background-color: #2e3440;
+    color: #ebcb8b;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#temperature.critical {
+    background-color: #a3be8c;
+    color: #282738;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#pulseaudio {
+    background: #2e3440;
+    color: #d8dee9;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#pulseaudio.muted {
+    background-color: #eb4d4b;
+    color: #282828;
+}
+
+#bluetooth {
+    background: #2e3440;
+    color: #5e81ac;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#network {
+    background-color: #2e3440;
+    color: #B48EAD;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#network.disconnected {
+    background-color: #f53c3c;
+    color: #282828;
+}
+
+#backlight {
+    background-color: #2e3440;
+    color: #d8dee9;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#battery {
+    background-color: #2e3440;
+    color: #d8dee9;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 5px 0px 10px;
+    font-weight: bold;
+}
+
+#battery.warning {
+    background: orange;
+}
+
+#battery.critical {
+    background: red;
+}
+
+#battery.plugged {
+    background: green;
+}
+
+#battery.charging {
+    animation-name: slide;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes slide {
+    0% {
+        background: red;
+    }
+
+    25% {
+        background: yellow;
+    }
+
+    50% {
+        background: blue;
+    }
+
+    100% {
+        background: green;
+    }
+}
+
+#battery.critical:not(.charging) {
+    animation-name: blink;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: #BF616A;
+        color: #B5E8E0;
+    }
+}
+
+#tray {
+    background: #2e3440;
+    margin: 5px 5px 5px 5px;
+    border-radius: 10px;
+    padding: 0px 12px;
+}
+
+#custom-cava {
+    background-color: #2e3440;
+    color: #BF616A;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+}
+
+#custom-logo {
+    background-color: #2e3440;
+    color: #cdd6f4;
+    border-radius: 0px 24px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 0 20px 0 13px;
+    font-size: 20px;
+}
+
+#custom-launcher button:hover {
+    background-color: #FB4934;
+    color: transparent;
+    border-radius: 10px;
+    margin-right: -5px;
+    margin-left: 10px;
+}
+
+#custom-pacman {
+    background-color: #2e3440;
+    color: #d8dee9;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#custom-powermenu {
+    background-color: #2e3440;
+    color: #BF616A;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 0px 0px 10px;
+}
