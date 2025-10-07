@@ -281,31 +281,32 @@ passwd 用户名
 
 1.彩蛋
 
-去掉以下内容前面的注释符:
-
 ```bash
+去掉以下内容前面的注释符:
 #Color
 #CheckSpace
 #VerbosePkgLists
-#ParallelDownloads=5
-ILoveCandy # 加入这行
+
+# 然后再加入这行
+ILoveCandy
 ```
 
-2.添加 archlinuxcn 源
+2.[multilib]
+
+```bash
+# 去掉下面两行前的#
+#[multilib]
+#Include = /etc/pacman.d/mirrorlist
+```
+
+3.添加 archlinuxcn 源
 
 在文件的最后加入以下内容:
 
 ```bash
 [archlinuxcn]
-Server = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
 Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
-```
-
-3.[multilib]
-
-```bash
-#[multilib]
-#Include = /etc/pacman.d/mirrorlist
+Server = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
 ```
 
 4.更新源
@@ -324,7 +325,7 @@ pacman -S archlinuxcn-keyring
 
 1.安装
 
-`pacman -S nvidia-open nvidia-settings` # 可选安装 lib32-nvidia-utils
+`pacman -S nvidia-open nvidia-settings lib32-nvidia-utils`
 
 2.修改 grub
 
@@ -362,7 +363,7 @@ pacman -S archlinuxcn-keyring
 
 - 先在 `/etc/pacman.d/` 创建目录 `hooks`
 
-- 然后在 `hooks` 中创建 `nvidia.hook` 文件，并加入下面内容:
+- 然后在 `hooks` 中创建 `nvidia.hook` 文件，并在文件中加入下面内容:
 
 ```bash
 [Trigger]
