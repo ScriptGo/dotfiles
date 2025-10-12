@@ -1,0 +1,99 @@
+conky.config = {
+
+out_to_x = true,
+out_to_wayland = false,
+
+---Window---
+
+own_window = true,                     --创建窗口
+own_window_type = 'override',          --窗口类型
+own_window_transparent = true,         --透明
+
+alignment = 'top_right',               --窗口所在屏幕位置
+gap_x = 25,                            --窗口离屏幕左边或右边的距离
+gap_y = 45,                            --窗口离屏幕顶部或底部的距离
+minimum_width = 270,                   --窗口最小宽度
+
+background = true,                     --后台运行
+double_buffer = true,                  --启用双重缓冲，消除闪烁
+no_buffers = true,
+
+---Borders---
+
+draw_borders = false,                  --是否绘制窗口边框
+draw_graph_borders = false,            --是否绘制网速cpu等外框
+-- show_graph_scale = false,
+-- show_graph_range = false,
+-- default_bar_size 60 8                 进度条尺寸
+
+---Font---
+
+font = 'Sarasa Term SC :size=16',
+use_xft = true,
+
+---Color---
+
+color0 = 'cc241d', --红
+color1 = '98971a', --绿
+color2 = 'd79921', --黄
+color3 = '458588', --蓝
+color4 = 'b16286', --橙
+color5 = '689d6a',
+color6 = 'a89984',
+color7 = 'd65d0e',
+color8 = 'ebdbb2', --白
+color9 = '282828', --黑
+
+---Other---
+
+cpu_avg_samples = 2,
+net_avg_samples = 2,
+format_human_readable = true,
+update_interval = 1.0,
+
+}
+
+--参数voffset用于调节上下位置；参数goto用于调节左右位置；
+--参数alignr用于靠右边对齐。参数font和color要有结束配对，以免混乱
+
+
+conky.text = [[
+
+${color2}OS: ${color8}${alignr}${execi 10000 awk -F= '/TION/ {print $2}' /etc/os-release |sed 's/"//g'} \
+${execi 10000 awk -F= '/EASE=/ {printf $2" "} /NAME/ {print $2}' /etc/os-release}
+${color2}Uptime: ${color8}${alignr}${uptime_short}
+${color2}Kernel: ${color8}${alignr}${kernel}
+${color5}${hr}
+${color2}CPU${alignr}${color7}$CPU%
+${color5}${hr}
+${color8}${top name 1}${alignr}${color1}${top pid 1}     ${color0}${top cpu 1}%
+${color8}${top name 2}${alignr}${color1}${top pid 2}     ${color0}${top cpu 2}%
+${color8}${top name 3}${alignr}${color1}${top pid 3}     ${color0}${top cpu 3}%
+${color8}${top name 4}${alignr}${color1}${top pid 4}     ${color0}${top cpu 4}%
+${color8}${top name 5}${alignr}${color1}${top pid 5}     ${color0}${top cpu 5}%
+${color8}${top name 6}${alignr}${color1}${top pid 6}     ${color0}${top cpu 6}%
+${color8}${top name 7}${alignr}${color1}${top pid 7}     ${color0}${top cpu 7}%
+${color5}${hr}
+${color2}RAM ${alignr}${color7}${mem} / ${memmax}
+${color5}${hr}
+${color8}${top_mem name 1} ${alignr}${color0}${top_mem mem_res 1}
+${color8}${top_mem name 2} ${alignr}${color0}${top_mem mem_res 2}
+${color8}${top_mem name 3} ${alignr}${color0}${top_mem mem_res 3}
+${color8}${top_mem name 4} ${alignr}${color0}${top_mem mem_res 4}
+${color8}${top_mem name 5} ${alignr}${color0}${top_mem mem_res 5}
+${color8}${top_mem name 6} ${alignr}${color0}${top_mem mem_res 6}
+${color8}${top_mem name 7} ${alignr}${color0}${top_mem mem_res 7}
+${color5}${hr}
+${color2}NET
+${color5}${hr}
+${color8}SSID  : ${color2}${alignr}${wireless_essid wlp3s0}
+${color8}IP    : ${color2}${alignr}${addrs wlp3s0}
+
+${color8}Up  :  ${color0}${upspeed wlp3s0}/s   ${color7}${alignr}${upspeedgraph wlp3s0 10,55}
+
+${color8}Down  :  ${color4}${downspeed wlp3s0}/s ${color4}${alignr}${downspeedgraph wlp3s0 10,55}
+
+${color8}TotalUp   :   ${alignr}${color0}${totalup wlp3s0}
+${color8}TotalDown   :   ${alignr}${color4}${totaldown wlp3s0}
+
+]]

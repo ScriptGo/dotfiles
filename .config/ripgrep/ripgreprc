@@ -1,0 +1,64 @@
+# limit output width
+--max-columns=150
+--max-columns-preview
+
+# Follow symbolic links.
+--follow
+
+# Don't respect ignore files (.gitignore, .ignore, etc.).
+--no-ignore
+
+# Exclude directories.
+--glob=!{.git,.svn,node_modules,tealdeer,Trash,vendor}
+
+# Exclude file types.
+--glob=!*.{lock}
+
+# Exclude files.
+--glob=!{package-lock.json}
+
+# Don't print lines longer than this limit.
+--max-columns=10000
+
+# Sort by file path.
+--sort=path
+
+# show column num
+--column
+
+# put filename on same line as match
+--no-heading
+
+# don't respect .ignore files (like .gitignore)
+--no-ignore-dot
+
+# flexi-case unless mixed are specified
+--smart-case
+
+# Add my 'web' type.
+--type-add=web:*.{html,css,js}*
+--type-add=rsp:*_spec.rb
+
+# Search hidden files and directories.
+--hidden
+
+# Using glob patterns to include/exclude files or folders
+--glob=!git/*
+--glob=!*.Xpsql
+
+# Configure color settings and styles.
+--colors=path:fg:green
+--colors=path:bg:0x3b,0x3b,0x3b
+--colors=path:style:bold
+--colors=path:style:underline
+
+--colors=line:fg:green
+--colors=line:style:bold
+
+--colors=column:fg:magenta
+--colors=column:style:nobold
+
+
+--colors=match:bg:black
+--colors=match:fg:magenta
+--colors=match:style:bold

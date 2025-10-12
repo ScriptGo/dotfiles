@@ -1,0 +1,256 @@
+* {
+    border: none;
+    font-family: "Iosevka Nerd Font", "Sarasa Term SC";
+    font-size: 22px;
+    min-height: 0;
+    font-style: normal;
+    font-weight: normal;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+button#label {
+    background: transparent;
+}
+
+tooltip {
+    background-color: transparent;
+    color: #ddc7a1;
+    border-radius: 10px;
+    border: solid 1px #FE8019;
+}
+
+tooltip label {
+    background-color: transparent;
+    color: #ddc7a1;
+    text-shadow: none;
+    border: none;
+}
+
+#workspaces,
+#clock,
+
+#cpu,
+#memory,
+#temperature,
+#pulseaudio,
+#bluetooth,
+
+#network,
+#backlight,
+#battery,
+#tray,
+
+#custom-cava,
+#custom-logo,
+#custom-pacman,
+#custom-powermenu,
+
+#workspaces {
+    background-color: #32302f;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+}
+
+#workspaces button {
+    border-radius: 10px;
+    padding: 1px 5px 1px 5px;
+}
+
+#workspaces button.active {
+    border: solid 1px #FE8019;
+}
+
+#clock {
+    background-color: #32302f;
+    color: #ddc7a1;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#cpu {
+    background-color: #32302f;
+    color: #689d6a;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#memory {
+    background-color: #32302f;
+    color: #c8779b;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#temperature {
+    background-color: #32302f;
+    color: #f0932b;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#temperature.critical {
+    background-color: #32302f;
+    color: #eb4d4b;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#pulseaudio {
+    background-color: #32302f;
+    color: #ddc7a1;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#pulseaudio.muted {
+    background-color: #32302f;
+    color: #eb4d4b;
+}
+
+#bluetooth {
+    background-color: #32302f;
+    color: #ddc7a1;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#network {
+    background-color: #32302f;
+    color: #ddc7a1;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#network.disconnected {
+    background-color: #32302f;
+    color: #f53c3c;
+}
+
+#backlight {
+    background-color: #32302f;
+    color: #ddc7a1;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#battery {
+    background-color: #32302f;
+    color: #ddc7a1;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#battery.warning {
+    background: orange;
+}
+
+#battery.critical {
+    background: red;
+}
+
+#battery.plugged {
+    background: green;
+}
+
+#tray {
+    background-color: #32302f;
+    color: #ec7024;
+    border: none;
+    margin: 5px 5px 5px 5px;
+    border-radius: 10px;
+    padding: 0px 12px;
+}
+
+#custom-cava {
+    background-color: #32302f;
+    color: #BF616A;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+}
+
+#custom-logo {
+    background-color: #32302f;
+    color: #cdd6f4;
+    border-radius: 0px 24px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 0 20px 0 13px;
+    font-size: 20px;
+}
+
+#custom-launcher button:hover {
+    background-color: #FB4934;
+    color: transparent;
+    border-radius: 10px;
+    margin-right: -5px;
+    margin-left: 10px;
+}
+
+#custom-pacman {
+    background-color: #32302f;
+    color: #ddc7a1;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#custom-powermenu {
+    background-color: #ea6962;
+    color: #32302f;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 0px 0px 10px;
+}
