@@ -18,17 +18,17 @@ sudo pacman -S xdg-user-dirs-gtk
 
 必装
 
-| 软件包     | 安装                             | 备注                       |
-| ---------- | -------------------------------- | -------------------------- |
-| bar        | sudo pacman -S waybar            |                            |
-| 认证       | sudo pacman -S hyprpolkitagent   |                            |
-| 终端       | sudo pacman -S kitty             |                            |
-| 通知管理   | sudo pacman -S dunst libnotify   |                            |
-| 登录管理器 | sudo pacman -S sddm              | sudo systemctl enable sddm |
-| 快速启动   | sudo pacman -S rofi-wayland      |                            |
-| 文件管理   | sudo pacman -S gvfs pcmanfm-gtk3 |                            |
-| 剪贴板     | sudo pacman -S cliphist xclip    |                            |
-| AUR 助手   | sudo pacman -S yay               |                            |
+| 软件包     | 安装                           | 备注                       |
+| ---------- | ------------------------------ | -------------------------- |
+| bar        | sudo pacman -S waybar          |                            |
+| 认证       | sudo pacman -S hyprpolkitagent |                            |
+| 终端       | sudo pacman -S kitty           |                            |
+| 通知管理   | sudo pacman -S dunst libnotify |                            |
+| 登录管理器 | sudo pacman -S sddm            | sudo systemctl enable sddm |
+| 快速启动   | sudo pacman -S rofi-wayland    |                            |
+| 文件管理   | sudo pacman -S gvfs pcmanfm    |                            |
+| 剪贴板     | sudo pacman -S cliphist xclip  |                            |
+| AUR 助手   | sudo pacman -S yay             |                            |
 
 ## GUI
 
