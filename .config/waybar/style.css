@@ -1,0 +1,174 @@
+@import "./color.css";
+
+* {
+  border: none;
+  font-family: "Iosevka Nerd Font", "Sarasa Term SC";
+  font-size: 22px;
+  font-weight: bold;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+tooltip {
+  border: 1px solid @orange;
+  border-radius: 10px;
+  color: @fg;
+  background-color: @bg;
+}
+
+tooltip label {
+  color: @fg;
+  background-color: @bg;
+}
+
+/* ------------------------------ workspaces ------------------------------- */
+#workspaces {
+  /* 边距 */
+  margin: 0px;
+  /* 内边距 */
+  padding: 2px 12px 8px 12px;
+  /* 边框 */
+  border-top: none;
+  /* 圆角 */
+  border-radius: 0px 0px 30px 30px;
+  /* 背景颜色 */
+  background-color: @bg;
+  /* 过渡动画 */
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#workspaces button {
+  margin: 0px 6px;
+  padding: 0px 8px;
+  border-radius: 20px;
+  color: @gray;
+  background: transparent;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#workspaces button.active {
+  margin-top: 4px;
+  padding: 0 12px;
+  border: 1px solid @orange;
+  background: rgba(235, 219, 178, 0.15);
+  box-shadow: 0 0 10px rgba(254, 128, 25, 0.4);
+}
+
+#workspace button:hover {
+  color: @fg;
+  background-color: rgba(131, 165, 152, 0.2);
+}
+
+#workspace button.urgent {
+  border: 1px solid @red;
+  color: @bg;
+}
+
+/* ------------------------------- sytle ----------------------------------- */
+#clock,
+#custom-pacman,
+#custom-cava,
+#pulseaudio,
+#bluetooth,
+#network,
+#backlight,
+#temperature {
+  margin: 5px 3px;
+  padding: 0px 12px;
+  border-radius: 12px;
+  color: @fg;
+  background-color: @bg;
+}
+
+/* ------------------------------ module ----------------------------------- */
+
+#pulseaudio.muted {
+  color: @red;
+  background-color: @bg;
+}
+
+#network.disconnected {
+  color: @red;
+  background-color: @bg;
+}
+
+#temperature.critical {
+  color: @red;
+  background-color: @bg;
+}
+/* --------------------------- Battery ------------------------------------- */
+#battery {
+  margin: 5px 3px;
+  padding: 0px 12px;
+  border-radius: 12px;
+  color: @fg;
+  background-color: @bg;
+  transition: all 0.3s ease;
+}
+
+#battery.charging {
+  background-color: @bg;
+  animation: battery_charginpulse 6s infinite linear;
+}
+
+@keyframes battery_charginpulse {
+  0% {
+    color: @red;
+  }
+  25% {
+    color: @orange;
+  }
+  50% {
+    color: @yellow;
+  }
+  75% {
+    color: @green;
+  }
+  100% {
+    color: @red;
+  }
+}
+
+#battery.warning:not(.charging) {
+  color: @bg;
+  background-color: @orange;
+}
+
+#battery.critical:not(.charging) {
+  color: @red;
+  background-color: @bg;
+}
+
+/* --------------------------- cava ---------------------------------------- */
+#custom-cava {
+  animation: cava_glow 6s infinite ease-in-out;
+}
+
+@keyframes cava_glow {
+  0% {
+    color: @red;
+  }
+  25% {
+    color: @orange;
+  }
+  50% {
+    color: @yellow;
+  }
+  75% {
+    color: @green;
+  }
+  100% {
+    color: @red;
+  }
+}
+
+/* ------------------------- powermenu ------------------------------------- */
+#custom-powermenu {
+  margin: 5px 3px;
+  padding: 0px 0px 0px 10px;
+  border-radius: 12px;
+  color: @bg;
+  background-color: @red;
+}
