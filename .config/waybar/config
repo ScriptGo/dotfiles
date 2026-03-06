@@ -98,7 +98,7 @@
   },
   "network": {
     "format-ethernet": "<span color='#83a598'></span> {ifname}",
-    "tooltip-format-ethernet": "<span color='#83a598'></span> {ifname} via {gwaddr}",
+    "tooltip-format-ethernet": "<span color='#83a598'></span> {ifname} via {ipaddr}",
     "format-wifi": "<span color='#8ec07c'>{icon}</span> ",
     "tooltip-format-wifi": "{essid} via {ifname}, Strength: {signalStrength}%",
     "format-icons": [
