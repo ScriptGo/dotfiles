@@ -11,7 +11,7 @@ sudo pacman -Syyu
 ```bash
 sudo pacman -S hyprland
 
-sudo pacman -S qt5-wayland qt6-wayland glfw-wayland
+sudo pacman -S qt6-wayland glfw-wayland
 sudo pacman -S xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
 ```
 
@@ -38,7 +38,7 @@ sudo pacman -S xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
 | 办公软件 | sudo pacman -S libreoffice-fresh libreoffice-fresh-zh-cn |                            |
 | 字体管理 | sudo pacman -S font-manager                              |                            |
 | 防火墙   | sudo pacman -S ufw                                       | sudo ufw enable            |
-| 科学上网 | sudo pacman -S v2raya                                    | yay -S clash-verge-rev-bin |
+| 上网     | sudo pacman -S v2raya                                    | yay -S clash-verge-rev-bin |
 | 聊天     | sudo pacman -S telegram-desktop                          |                            |
 | 浏览器   | yay -S google-chrome                                     |                            |
 | 其他     | sudo pacman -S rpi-imager                                |                            |
@@ -110,7 +110,7 @@ sudo systemctl enable tlp
 
 | 软件包   | 安装                                        | 备注 |
 | -------- | ------------------------------------------- | ---- |
-| 设置工具 | sudo pacman -S nwg-look sassc kvantum qt5ct |      |
+| 设置工具 | sudo pacman -S nwg-look sassc kvantum qt6ct |      |
 | idle     | sudo pacman -S hypridle hyprlock            |      |
 | 壁纸切换 | sudo pamcan -S swww                         |      |
 

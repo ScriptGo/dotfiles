@@ -27,11 +27,10 @@
       "1": "<span color='#83a598'></span>",
       "2": "<span color='#ebdbb2'></span>",
       "3": "<span color='#fabd2f'></span>",
-      "4": "<span color='#b8bb26'></span>",
+      "4": "<span color='#8ec07c'></span>",
       "5": "<span color='#fb4934'></span>",
-      "6": "<span color='#8ec07c'></span>",
-      "7": "<span color='#d3869b'></span>",
-      "default": "<span color='#83a598'>󰮯</span>"
+      "6": "<span color='#d3869b'></span>",
+      "default": "<span color='#fe8019'>󰮯</span>"
     },
     "sort-by-number": true,
     "all-outputs": true,

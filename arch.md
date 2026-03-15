@@ -384,9 +384,9 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 
 ### 字体
 
-| 安装                                                                | 备注 |
-| ------------------------------------------------------------------- | ---- |
-| pacman -S terminus-font noto-fonts noto-fonts-cjk noto-fonts-emoji  |      |
-| pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd                |      |
-| pacman -S ttf-sarasa-gothic ttf-fira-code                           |      |
-| pacman -S ttf-firacode-nerd awesome-terminal-fonts otf-font-awesome |      |
+| 安装                                                               | 备注 |
+| ------------------------------------------------------------------ | ---- |
+| pacman -S terminus-font noto-fonts noto-fonts-cjk noto-fonts-emoji |      |
+| pacman -S ttf-sarasa-gothic                                        |      |
+| pacman -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd               |      |
+| pacman -S awesome-terminal-fonts otf-font-awesome                  |      |
