@@ -8,7 +8,7 @@
 
 configuration {
     /*---------- General setting ----------*/
-    modi:                 "drun,run,filebrowser,keys";
+    modi:                 "drun,run";
     show-icons:           true;
     icon-theme:           "MacBuntu-Mine-Y";
     fixed-num-lines:      true;
@@ -68,10 +68,9 @@ configuration {
 
     /*---------- Display setting ----------*/
     display-window:       "";
-    display-windowcd:     "";
+    display-drun:         "";
     display-run:          "";
     display-ssh:          "";
-    display-drun:         "";
     display-combi:        "";
     display-keys:         "";
     display-filebrowser:  "";
@@ -198,7 +197,7 @@ configuration {
 /*****----- Main Window -----*****/
 window {
     /* properties for window widget */
-    font:                 "FiraCode Nerd Font 18";
+    font:                 "JetBrainsMono NF 18";
     transparency:         "real";
     location:             center;
     anchor:               center;
